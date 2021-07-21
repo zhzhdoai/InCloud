@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    timeout-minutes: 7200
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -63,8 +64,8 @@ jobs:
           git add output/active_urls.txt
       - name: Commit results to Github
         run: |
-          git config --local user.email "admin@inbug.org"
-          git config --global user.name "inbug-team"
+          git config --local user.email "929337105@qq.com"
+          git config --global user.name "zhzhdoai"
           git commit -m "InCloud Report" -a --allow-empty
       - name: Push changes
         uses: ad-m/github-push-action@master
